@@ -13,7 +13,7 @@ const Footer = () => {
                 <Row>
                     <Col className="mt-4">
                         <img src={logo} alt="" />
-                        <p className="text-secondary mt-3"><small>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors consectetur adipisicing elit. Distinctio vitae maiores enim ea atque? Natus iure autem cumque, quaerat distinctio pariatur velit illo hic a eos paccusamus.</small></p>
+                        <p className="text-secondary mt-3"><small>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors consectetur adipisicing elit. Distinctio vitae maiores enim ea atque? Natus iure autem cumque..</small></p>
                         <Button variant="outline-danger">Read More</Button>
                     </Col>
                     <Col className="text-light mt-4">
@@ -23,7 +23,6 @@ const Footer = () => {
                             <Nav.Link className="text-secondary"  to="link-1"><FontAwesomeIcon icon={faArrowRight} /> ECG</Nav.Link>
                             <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Echo cardiogram</Nav.Link>
                             <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Stress ECG</Nav.Link>
-                            <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Cardiac Surgery</Nav.Link>
                         </Nav>
                     </Col>
                     <Col className="text-light mt-4">
@@ -33,7 +32,6 @@ const Footer = () => {
                             <Nav.Link className="text-secondary"  to="link-1"><FontAwesomeIcon icon={faArrowRight} /> Dr. Jam Doe</Nav.Link>
                             <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Dr. Stewart</Nav.Link>
                             <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Dr. Benson Loius</Nav.Link>
-                            <Nav.Link className="text-secondary"  to="link-2"><FontAwesomeIcon icon={faArrowRight} /> Dr. Johnson Lee</Nav.Link>
                         </Nav>
                     </Col>
                     <Col className="text-light mt-4">
@@ -48,7 +46,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <Row className="text-center mt-4">
-                    <p className="text-secondary"> <small>Copyright &copy; 2021 All rights reserved | This template is made by <span className="text-light">Monayem Khan</span></small></p>
+                    <p className="text-secondary"> <small> <span className="text-danger">HeartCare</span> © 2021, All Rights Reserved, Design & Developed By: <span className="text-light">Monayem Khan</span></small></p>
                 </Row>
             </Container>
         </div>
