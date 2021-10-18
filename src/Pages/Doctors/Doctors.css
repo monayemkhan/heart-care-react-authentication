@@ -1,0 +1,7 @@
+.inner-banner{
+    background-image: url("../../images/inner.jpg");
+    height: 50vh;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: cover;
+}
