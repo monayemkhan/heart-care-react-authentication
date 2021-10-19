@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <div className="container">
             <div className="row align-items-center" style={{ height: "100vh" }}>
-                <div className="col-md-6 shadow p-5">
+                <div className="col-md-12 mx-auto shadow p-5 w-50">
                     <form onSubmit={handleRegistration}>
                         <h3 className="text-secondary text-center fw-bold mb-5">Please {isLogin ? 'Login' : 'Register'}</h3>
 
@@ -54,9 +54,7 @@ const Login = () => {
                         <button onClick={googleLogIn} className="btn btn-outline-danger fw-bold shadow" >Google Sign in</button>
                     </div>
                 </div>
-                <div className="col-md-6 d-none d-md-block">
-                    <img className="img-fluid" src="" alt="" />
-                </div>
+                
             </div>
         </div>
     );
