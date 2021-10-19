@@ -2,18 +2,22 @@ import { faEnvelope, faGlobeAsia, faHospital, faPhone } from '@fortawesome/free-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import './Contact.css'
 
 const Contact = () => {
     return (
         <div className="contact-section">
             <div className="inner-banner">
-                <div class="container py-5">
-                    <Row className="text-center py-5">
-                        <Col className="py-5">
-                            <h1 className="fs-1 fw-bold text-light">Contact</h1>
-                        </Col>
-                    </Row>
+                <div className="overlay">
+                    <div class="container py-5">
+                        <Row className="text-center py-5">
+                            <Col className="py-5">
+                                <h1 className="fs-1 fw-bold text-light">Contact</h1>
+                            </Col>
+                        </Row>
+                    </div>
                 </div>
+                
             </div>
             <div className="contact-form my-5">
                 <div className="container">

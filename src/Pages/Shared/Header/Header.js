@@ -13,7 +13,7 @@ const Header = () => {
             
             <Navbar bg="light" variant="light">
                 <Container>
-                    
+
                     <Col xs="1" lg="3">
                     <Navbar.Brand to="/#home">
                         <img src={logo} alt="" />                        
@@ -32,11 +32,11 @@ const Header = () => {
                         <Nav className="justify-content-end my-3">
                             { user?.email?
                                 <NavLink to="/login">
-                                <Button className="me-2 rounded-pill" variant="danger" size="sm">Log-out</Button>
+                                <Button onClick={logOut} className="me-2 rounded-pill" variant="danger" size="sm">Log-out</Button>
                                 </NavLink>
                                 :
                                 <NavLink to="/login">
-                                <Button className="me-2 rounded-pill" variant="outline-danger" size="sm">Log In</Button>
+                                <Button className="me-2 rounded-pill" variant="danger" size="sm">Log In</Button>
                                 </NavLink>
                             }
                             <p className="mt-1">

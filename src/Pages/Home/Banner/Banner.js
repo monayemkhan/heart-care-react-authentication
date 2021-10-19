@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Carousel } from 'react-bootstrap';
-// import './Banner.css'
+ import './Banner.css'
 
 const Banner = () => {
     const [index, setIndex] = useState(0);
@@ -12,10 +12,9 @@ const Banner = () => {
   return (
     <Carousel className="banner" activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item >
-        <div className="overlay"></div>
         <img
           className="d-block w-100 "
-          src="https://i.ibb.co/JFSRrK8/slide1.jpg"
+          src="https://i.ibb.co/rpfd3Lh/banner.jpg"
           alt=""
         />
         <Carousel.Caption>
@@ -28,11 +27,12 @@ const Banner = () => {
           <Button className="rounded-pill mx-2 mb-5" variant="danger">Call for Inquiry</Button>
           <Button className="rounded-pill mx-2 mb-5" variant="danger">Ask Cardiologist</Button>
         </Carousel.Caption>
-      </Carousel.Item>  
+      </Carousel.Item>
+
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.ibb.co/h1Gmb6Z/slide2.jpg"
+          src="https://i.ibb.co/rpfd3Lh/banner.jpg"
           alt=""
         />
         <Carousel.Caption>
@@ -42,10 +42,11 @@ const Banner = () => {
           <Button className="rounded-pill mx-2 mb-5" variant="danger">Ask Cardiologist</Button>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.ibb.co/4Wmg3C6/slide3.jpg"
+          src="https://i.ibb.co/rpfd3Lh/banner.jpg"
           alt=""
         />
         <Carousel.Caption>
