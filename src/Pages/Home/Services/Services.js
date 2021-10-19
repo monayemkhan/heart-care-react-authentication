@@ -13,7 +13,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div className="text-center py-5">
+        <div className="text-center mb-5">
             <div className="mt-5">
                 <div className="container">
                     <h3 className="text-danger fw-light">Our Departments</h3>

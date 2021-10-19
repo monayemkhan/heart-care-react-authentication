@@ -5,10 +5,11 @@ import formPic from '../../../images/formPic.jpg'
 const Appointment = () => {
     return (
         <div className="text-center">
-            <div className="py-3">
-                <h1 className="fs-1 fw-bold">Get Appointment</h1>
-            </div>
-            <Container>
+            
+            <Container className="border-top border-secondary my-5">
+                <div className="py-3 mt-5">
+                    <h1 className="fs-1 fw-bold">Get Appointment</h1>
+                </div>
                 <Row>
                     <Col className="mt-5 align-center">
                         <Form>

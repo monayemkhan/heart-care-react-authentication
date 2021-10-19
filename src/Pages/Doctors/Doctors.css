@@ -4,4 +4,21 @@
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: cover;
+    position: relative;
+    z-index: 1;
 }
+.text-design h1 {
+    z-index: 99;
+}
+.overlay {
+    position: absolute;
+    display: block;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    z-index: 5;
+  }
