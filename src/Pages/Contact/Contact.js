@@ -13,7 +13,7 @@ const Contact = () => {
             <div className="inner-banner">
                 <div className="overlay">
                     <div class="container py-5">
-                        <Row className="text-center py-5">
+                        <Row className="text-center">
                             <Col className="py-5">
                                 <h1 className="fs-1 fw-bold text-light">Contact Us</h1>
                             </Col>

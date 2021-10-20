@@ -33,7 +33,7 @@ const Services = () => {
                             ></Service>)
                         }
                     </div>
-                    <Button variant="outline-danger" className="mt-5">See All</Button>
+                    <Button variant="outline-danger" className="mt-5 px-5 fw-bold">See All</Button>
                 </div>
             </div>
         </div>

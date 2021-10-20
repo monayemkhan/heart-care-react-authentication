@@ -40,7 +40,7 @@ const Doctors = () => {
                             ></Doctor>)
                         }
                     </div>
-                    <Button variant="outline-danger" className="mt-5">See All</Button>
+                    <Button variant="danger" className="mt-5 px-5">See All</Button>
                 </div>
             </div>
         </div>

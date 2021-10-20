@@ -1,4 +1,4 @@
-# Heart care Hospital
+# Heart Care Medical
 
 This project deployed on [FireBase: https://heart-care-website.web.app/](https://heart-care-website.web.app/).
 
@@ -9,7 +9,7 @@ Here some short description or details of those folders
 
 ### App.js
 
-In App.js file you can see the Router of this website. I just simply rename the BrowserRoter as Router and I use Header Component before the Switch and footer after the Switch for show in all pages.I use Navlink instant of a tag for load the data without loading the site. And also use a private route for not accesable component 
+In App.js file you can see the Router of this website. I just simply rename the BrowserRoter as Router and I use Header Component before the Switch and footer after the Switch for show in all pages.I use Navlink instant of a tag for load the data without loading the site. And also use a private route for not accesable component.
 
 ### Header
 
@@ -28,12 +28,12 @@ On return of data I returned Service component data under the hood of Service-co
 
 ### Doctor
 
-This Doctor component is one of the Services component of this projects here user shaw Teacher/trainer information. 
+This Doctor component is one of the Services component of this projects here user shaw Doctors information. 
 This Component can .map an array and pass data to Doctor component. 
 
 ### Service Details
 
-This ServiceDetails is a private component nobody can access this component without log in. when a user log in into the site user can able t access the service details.
+This Service Details is a private component nobody can access this component without log in. when a user log in into the site user can able t access the service details.
 
 
 ### Login
@@ -41,7 +41,7 @@ This Login component can helps a user to log/sign into the site. Two types of lo
 
 **Note:  Firebase Authentication are used for user Authentication and Authorization**
 
-This About component can show up the About data and Teacher data as well. 
+This about component can show up the About data and data as well. 
 user can shaw 3 data updated
 
 

@@ -44,9 +44,9 @@ const Header = () => {
                                     <div className="col-md-6">
                                         <ul className="navbar-nav justify-content-center">
                                             <li className="nav-item p-2">
-                                            { user?.email?
+                                            { user?.displayName?
                                                     <NavLink to="/login">
-                                                    <button onClick={logOut} className="btn btn-danger rounded-3" >Log-out</button>
+                                                    <button onClick={logOut} className="btn btn-danger rounded-3 btn-sm my-1">Log-out</button>
                                                     </NavLink>
                                                     :
                                                     <NavLink to="/login">
@@ -54,7 +54,7 @@ const Header = () => {
                                                     </NavLink>
                                                 }
                                             </li>
-                                            { user?.email?
+                                            { user?.displayName?
                                                 <li className="nav-item p-2 my-2">
                                                     Signed in as: <a href="/login">{user?.displayName}</a>
                                                 </li>

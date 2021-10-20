@@ -12,7 +12,6 @@ import Login from './Pages/Shared/Login/Login/Login';
 import PrivateRoute from './Pages/Shared/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 
-
 function App() {
   return (
     // set react-router-dom

@@ -7,9 +7,9 @@ const Login = () => {
     
     return (
         // log in and registration section
-        <div className="container">
-            <div className="row align-items-center" style={{ height: "100vh" }}>
-                <div className="col-md-12 mx-auto shadow p-sm-3 p-md-5 w-75">
+        <div className="container py-5">
+            <div className="row ">
+                <div className="col-md-12 mx-auto shadow my-5 py-3 w-75">
                     <form onSubmit={handleRegistration}>
                         <h3 className="text-secondary text-center fw-bold mb-5">Please {isLogin ? 'Login' : 'Register'}</h3>
 
@@ -19,11 +19,12 @@ const Login = () => {
                             <input type="text" onBlur={handleNameChange} className="form-control" id="inputName" placeholder="Your Name" />
                         </div>
                         </div>}
+                        
                         <div className="row mb-3">
-                        <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
-                        <div className="col-sm-10">
-                            <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" required />
-                        </div>
+                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+                            <div className="col-sm-10">
+                                <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" required />
+                            </div>
                         </div>
                             <div className="row mb-3">
                             <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
@@ -31,6 +32,7 @@ const Login = () => {
                                     <input type="password" onBlur={handlePasswordChange} className="form-control" id="inputPassword3" required />
                                 </div>
                             </div>
+
                         <div className="row mb-3">
                             <div className="col-sm-10 offset-sm-2">
                                 <div className="form-check">
@@ -52,7 +54,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="from-group mt-5 text-center">
-                        <button onClick={googleLogIn} className="btn btn-outline-danger fw-bold shadow">Google Sign in</button>
+                        <button onClick={googleLogIn} className="btn btn-outline-danger fw-bold my-3 shadow">Google Sign in</button>
                     </div>
                 </div>
             </div>

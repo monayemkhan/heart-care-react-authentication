@@ -2,6 +2,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, creat
 import { useEffect, useState } from "react";
 import authInitialize from "../Pages/Shared/Login/firebase/firebase.init";
 
+// call auth initialization
 authInitialize();
 
 const useFirebase = () => {
@@ -14,6 +15,7 @@ const useFirebase = () => {
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
 
+    // google log in function
     const googleLogIn = () => {
         setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
@@ -39,10 +41,11 @@ const useFirebase = () => {
     const handlePasswordChange = e => {
       setPassword(e.target.value)
     }
-  
+
+    // handle registration function
     const handleRegistration = e => {
       e.preventDefault();
-      console.log(email, password);
+
       if (password.length < 6) {
         setError('Password Must be at least 6 characters long.')
         return;
@@ -60,12 +63,12 @@ const useFirebase = () => {
       }
     }
   
+    // process log in function
     const processLogin = (email, password) => {
       setIsLoading(true)
       signInWithEmailAndPassword(auth, email, password)
         .then(result => {
           const user = result.user;
-          console.log(user);
           setUser(user);
           setError(''); 
         })
@@ -74,11 +77,11 @@ const useFirebase = () => {
         })
     }
   
+    // new user registration fuction
     const registerNewUser = (email, password) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
           const user = result.user;
-          console.log(user);
           setError('');
           verifyEmail();
           setUserName();
@@ -117,32 +120,34 @@ const useFirebase = () => {
       return () => unsubcribed;
   }, [isLoading])
       
-      const logOut = () => {
-          setIsLoading(true)
-          signOut(auth).then(() => { })
-          .finally(() => setIsLoading(false))
-      }
+    // user log out function
+    const logOut = () => {
+        setIsLoading(true)
+        signOut(auth).then(() => { })
+        .finally(() => setIsLoading(false))
+    }
 
-      return {
-        user,
-        isLogin,
-        name,
-        email,
-        password,
-        isLogin,
-        handlePasswordChange,
-        googleLogIn,
-        isLoading,
-        logOut,
-        handleRegistration,
-        handleNameChange,
-        toggleLogin,
-        registerNewUser,
-        processLogin, 
-        handleResetPassword,
-        handleEmailChange,
-        verifyEmail
-    }  
+    return {
+      user,
+      isLogin,
+      name,
+      email,
+      password,
+      isLogin,
+      error,
+      handlePasswordChange,
+      googleLogIn,
+      isLoading,
+      logOut,
+      handleRegistration,
+      handleNameChange,
+      toggleLogin,
+      registerNewUser,
+      processLogin, 
+      handleResetPassword,
+      handleEmailChange,
+      verifyEmail
+    }
 };
 
 export default useFirebase;

@@ -49,7 +49,7 @@ const Appointment = () => {
                     </Col>
                     {/* appointment image*/}
                     <Col sm={12} md={6}>
-                        <img className="w-50" src={formPic} alt="" />
+                        <img className="w-50 my-3" src={formPic} alt="" />
                     </Col>
                 </Row>
             </Container>
