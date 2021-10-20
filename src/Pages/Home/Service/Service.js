@@ -3,8 +3,10 @@ import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Service = (props) => {
+    // destructuring data
     const { key, name, description, img} = props.service
     return (
+        // single service card
         <div className="col-md-3 p-0">
             <Card  className="m-2">
                 <Card.Img variant="top" src={img} />
@@ -14,9 +16,8 @@ const Service = (props) => {
                     {description}
                     </Card.Text>
                     <Link to={`/service/${key}`}>
-                        <Button variant="danger">Details</Button>
+                        <Button variant="danger" className="px-5" size="sm">Details</Button>
                     </Link>
-                    
                 </Card.Body>
             </Card>
         </div>

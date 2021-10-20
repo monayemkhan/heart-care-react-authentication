@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 
 const Login = () => {
-    const {googleLogIn, handleResetPassword, handleNameChange ,handleEmailChange,handlePasswordChange, isLogin, handleRegistration, toggleLogin, error} = useAuth();
+    const {googleLogIn, handleNameChange , handleEmailChange, handlePasswordChange, isLogin, handleRegistration, toggleLogin, error} = useAuth();
     
     return (
+        // log in and registration section
         <div className="container">
             <div className="row align-items-center" style={{ height: "100vh" }}>
-                <div className="col-md-12 mx-auto shadow p-5 w-50">
+                <div className="col-md-12 mx-auto shadow p-sm-3 p-md-5 w-75">
                     <form onSubmit={handleRegistration}>
                         <h3 className="text-secondary text-center fw-bold mb-5">Please {isLogin ? 'Login' : 'Register'}</h3>
 
@@ -51,10 +52,9 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="from-group mt-5 text-center">
-                        <button onClick={googleLogIn} className="btn btn-outline-danger fw-bold shadow" >Google Sign in</button>
+                        <button onClick={googleLogIn} className="btn btn-outline-danger fw-bold shadow">Google Sign in</button>
                     </div>
                 </div>
-                
             </div>
         </div>
     );

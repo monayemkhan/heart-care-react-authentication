@@ -15,7 +15,8 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    
+    // set react-router-dom
+    <div className="App">
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -48,7 +49,7 @@ function App() {
           <Footer></Footer>
         </Router>
       </AuthProvider>
-    
+    </div>
   );
 }
 

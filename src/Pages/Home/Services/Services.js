@@ -4,7 +4,7 @@ import Service from '../Service/Service';
 
 const Services = () => {
     const [services, setService] = useState([]);
-
+    // using useEffect for data load
     useEffect(() => {
         fetch('./servicesData.json')
         .then(res => res.json())
@@ -13,8 +13,10 @@ const Services = () => {
     }, []);
 
     return (
+        // services section
         <div className="text-center mb-5">
             <div className="mt-5">
+                {/* services header */}
                 <div className="container">
                     <h3 className="text-danger fw-light">Our Departments</h3>
                     <h1 className="fw-bold">DEPARTMENTAL SERVICES</h1>
@@ -22,6 +24,7 @@ const Services = () => {
             </div>
             <div className="py-5">
                 <div className="container">
+                    {/* get service by mapping */}
                     <div className="row service-section">
                         {
                             services.map(service => <Service

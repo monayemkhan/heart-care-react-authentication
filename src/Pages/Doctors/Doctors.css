@@ -1,7 +1,7 @@
+/* inner banner section styles */
 .inner-banner{
     background-image: url("../../images/inner.jpg");
-    height: 50vh;
-    /* background-attachment: fixed; */
+    height: 40vh;
     background-repeat: no-repeat;
     background-position: cover;
     position: relative;

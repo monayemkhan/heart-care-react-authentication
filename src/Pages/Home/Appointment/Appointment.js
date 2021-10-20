@@ -4,14 +4,15 @@ import formPic from '../../../images/formPic.jpg'
 
 const Appointment = () => {
     return (
+        // appointment section
         <div className="text-center">
-            
-            <Container className="border-top border-secondary my-5">
+            <Container className="border-top border-danger my-5">
                 <div className="py-3 mt-5">
                     <h1 className="fs-1 fw-bold">Get Appointment</h1>
                 </div>
                 <Row>
-                    <Col className="mt-5 align-center">
+                    {/* appointment form*/}
+                    <Col sm={12} md={6} className="mt-5 align-center">
                         <Form>
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridEmail">
@@ -21,7 +22,6 @@ const Appointment = () => {
                                     <Form.Control type="number" placeholder="Phone Number *" />
                                 </Form.Group>
                             </Row>
-
                             <Row className="mb-3">
                                 <Form.Group as={Col} controlId="formGridPassword">
                                     <Form.Control type="date" placeholder="" />
@@ -47,8 +47,9 @@ const Appointment = () => {
                             <Button variant="danger">Book Appointment</Button>
                         </Form>
                     </Col>
-                    <Col>
-                        <img className="w-75" src={formPic} alt="" />
+                    {/* appointment image*/}
+                    <Col sm={12} md={6}>
+                        <img className="w-50" src={formPic} alt="" />
                     </Col>
                 </Row>
             </Container>

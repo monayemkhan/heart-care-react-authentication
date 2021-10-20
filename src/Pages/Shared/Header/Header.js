@@ -1,52 +1,74 @@
 import React from 'react';
-import { Button, Col, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/Logo/logo.png'
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    console.log(user?.email);
 
     return (
-        <div>
-            
-            <Navbar bg="light" variant="light">
-                <Container>
-
-                    <Col xs="1" lg="3">
-                    <Navbar.Brand to="/#home">
-                        <img src={logo} alt="" />                        
-                    </Navbar.Brand>
-                    </Col>
-                    
-                    <Col xs="1" lg="4" >
-                        <Nav className="justify-content-end ">
-                            <NavLink className="px-3 fs-5 nav-link" activeClassName="text-primary fw-bold" to="/home">Home</NavLink>
-                            <NavLink className="px-3 fs-5 nav-link" activeClassName="text-primary fw-bold" to="/services">Services</NavLink>
-                            <NavLink className="px-3 fs-5 nav-link" activeClassName="text-primary fw-bold" to="/doctors">Doctors</NavLink>
-                            <NavLink className="px-3 fs-5 nav-link" activeClassName="text-primary fw-bold" to="/contact">Contact</NavLink>
-                        </Nav>
-                    </Col>
-                    <Col xs="1" lg="4">
-                        <Nav className="justify-content-end my-3">
-                            { user?.email?
-                                <NavLink to="/login">
-                                <Button onClick={logOut} className="me-2 rounded-pill" variant="danger" size="sm">Log-out</Button>
-                                </NavLink>
-                                :
-                                <NavLink to="/login">
-                                <Button className="me-2 rounded-pill" variant="danger" size="sm">Log In</Button>
-                                </NavLink>
-                            }
-                            <p className="mt-1">
-                                Signed is as: <Link to="/login">{user?.displayName}</Link>
-                            </p>
-                        </Nav>
-                    </Col>
-                </Container>
-            </Navbar>
-        </div>
+        // navbar or navigation bar section
+        <>
+            <div className="header w-100 bg-light">
+                <div className="container">
+                    {/* site logo */}
+                        <div className="navbar navbar-expand-md navbar-light w-100 ">
+                            <div className="col-md-4 m-0 p-0 ">
+                                <div className="navbar-brand m-0 p-0" >
+                                    <img className="py-3" src={logo} alt="" />
+                                </div>
+                            </div>
+                            {/* navigation bar */}
+                            <div className="col-md-8"> 
+                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                                <nav className="collapse navbar-collapse" id="navbarNav">
+                                    <div className="col-md-6">
+                                        <ul className="navbar-nav ">
+                                            <li className="nav-item p-2">
+                                                <NavLink activeClassName="text-primary fw-bold" className="nav-link fs-5" to="/home">Home</NavLink>
+                                            </li>
+                                            <li className="nav-item p-2">
+                                                <NavLink activeClassName="text-primary fw-bold" className="nav-link fs-5" to="/services">Services</NavLink>
+                                            </li>
+                                            <li className="nav-item p-2">
+                                                <NavLink activeClassName="text-primary fw-bold" className="nav-link fs-5" to="/doctors">Doctors</NavLink>
+                                            </li>
+                                            <li className="nav-item p-2">
+                                                <NavLink activeClassName="text-primary fw-bold" className="nav-link fs-5" to="/contact">Contact</NavLink>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    {/* login and registration bar */}
+                                    <div className="col-md-6">
+                                        <ul className="navbar-nav justify-content-center">
+                                            <li className="nav-item p-2">
+                                            { user?.email?
+                                                    <NavLink to="/login">
+                                                    <button onClick={logOut} className="btn btn-danger rounded-3" >Log-out</button>
+                                                    </NavLink>
+                                                    :
+                                                    <NavLink to="/login">
+                                                    <button className="btn btn-outline-danger me-1 rounded-3 fw-bold" >Log In</button>
+                                                    </NavLink>
+                                                }
+                                            </li>
+                                            { user?.email?
+                                                <li className="nav-item p-2 my-2">
+                                                    Signed in as: <a href="/login">{user?.displayName}</a>
+                                                </li>
+                                                :
+                                                ''
+                                            }
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </>
     );
 };
 
